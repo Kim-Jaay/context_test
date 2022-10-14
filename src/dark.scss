@@ -1,0 +1,17 @@
+body { margin: 0; }
+.App {
+    background: white; height: 100vh;
+
+    &.on { background: black; color: white; }
+    .dark_btn {
+        position: relative;
+
+        button { position: absolute; top: 0; left: 0; z-index: -1; }
+        label {
+            position: absolute; top: 20px; left: 20px; display: inline-block; width: 100px; height: 30px; background: #ddd; font-size: 0; border-radius: 15px;
+
+            &::after { content: ''; position: absolute; width: 26px; height: 26px; top: 2px; left: 2px; background: black; border-radius: 50%; }
+            &.on::after { background: white; left: auto; right: 2px; }
+        }
+    }
+}
